@@ -96,3 +96,10 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+a {
+  color: $default;
+  font-size: 16px;
+  line-height: 26px;
+  @extend %quicksand-500;
+}

@@ -1,7 +1,5 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
-  // .footer__container
+  background: $grayColor;
   &__container {
     display: flex;
     align-items: center;
@@ -9,5 +7,119 @@
       flex-direction: column;
       align-items: flex-start;
     }
+  }
+}
+
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  &__logo {
+    display: block;
+    margin-bottom: 33px;
+  }
+  &__contact {
+    width: 250px;
+    margin-right: 50px;
+  }
+  &__nav {
+    width: 170px;
+    margin-right: 30px;
+  }
+  &__item-form {
+    max-width: 470px;
+  }
+  &__item {}
+  &__adress,
+  &__email,
+  &__phone {
+    margin-bottom: 14px;
+    display: block;
+  }
+  &__social-list {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+  }
+  &__social-item + .footer-top__social-item {
+    padding-left: 18px;
+  }
+  &__social-link {
+    transition: all .3s;
+    path {
+      fill: $default;
+    }
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 1;
+  }
+  &__list {
+    
+  }
+  &__link {
+    margin-bottom: 14px;
+    display: block;
+  }
+  &__text {
+    color: $default;
+    font-size: 16px;
+    line-height: 26px;
+    @extend %quicksand-500;
+    margin-bottom: 25px;
+  }
+  &__form {}
+  &__form-input {
+    background-color: #fff;
+    max-width: 320px;
+    border: none;
+    width: 100%;
+    padding: 12px 10px 12px 15px;
+    font-size: 16px;
+    margin-right: 10px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    color: $default;
+    &::placeholder {
+      font-size: 16px;
+      color: $default;
+    }
+  }
+  &__form-button {
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+}
+.logo {
+  &__img {}
+}
+.footer-bottom {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  &__copy {
+    font-size: 12px;
+    color: $default;
+  }
+  &__accept {
+    font-size: 12px;
+    color: $default;
+  }
+  &__accept-img {
+    display: inline;
+    margin-left: 25px;
   }
 }
