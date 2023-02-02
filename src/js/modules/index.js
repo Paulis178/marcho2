@@ -1,5 +1,14 @@
 import toggleBodyLock from './../helpers/toggleBodyLock'
-import { html, firstScreen, header, burgerButton } from './../helpers/elementsNodeList'
+import {
+  html,
+  firstScreen,
+  header,
+  burgerButton
+} from './../helpers/elementsNodeList'
+import Swiper, {
+  Navigation,
+  Pagination
+} from 'swiper'
 
 // logger (Full Logging System) =================================================================================================================
 function FLS(message) {
@@ -82,7 +91,9 @@ function headerFixed() {
 
 // Универсальная функция для открытия и закрытия попапо =================================================================================================================
 const togglePopupWindows = () => {
-  document.addEventListener('click', ({ target }) => {
+  document.addEventListener('click', ({
+    target
+  }) => {
     if (target.closest('[data-type]')) {
       const popup = document.querySelector(
         `[data-popup="${target.dataset.type}"]`
@@ -113,7 +124,9 @@ const togglePopupWindows = () => {
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 const menuInit = () => {
   if (burgerButton) {
-    document.addEventListener('click', ({ target }) => {
+    document.addEventListener('click', ({
+      target
+    }) => {
       if (target.closest('.icon-menu')) {
         html.classList.toggle('menu-open')
         toggleBodyLock(html.classList.contains('menu-open'))
@@ -144,3 +157,11 @@ export {
   menuOpen,
   menuClose,
 }
+
+const swiper = new Swiper('.swiper', {
+  modules: [Pagination],
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});

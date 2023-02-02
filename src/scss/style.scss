@@ -19,7 +19,9 @@
 * раскомментировать для использования 
 */
 // @import 'libs/aos';
-// @import 'libs/swiper';
+@import 'libs/swiper';
+@import '../../node_modules/swiper/modules/navigation/navigation';
+@import '../../node_modules/swiper/modules/pagination/pagination';
 
 // Подлючение кастомного скрола для всего сайта =======================================================================================================================
 @import 'config/scrollbar';
@@ -33,3 +35,77 @@
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import 'layout/header';
 @import 'layout/footer';
+
+.top-slider {
+  background-color: #f6f6f6;
+  padding-top: 65px;
+  background-image: url('../images/top-slider-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__container {
+    max-width: 1560px;
+  }
+  &__inner {
+    
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    padding-left: 175px;
+    padding-top: 125px;
+  }
+  &__title {
+    max-width: 670px;
+    font-size: 58px;
+    line-height: 68px;
+    color: $title;
+    @extend %roboto-700;
+    margin-bottom: 35px;
+  }
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+  &__link {
+    @extend %btn;
+    padding: 14px 36px;
+  }
+  &__img {}
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-pagination-bullet {
+    margin: 0 8px !important;
+    background-color: $default;
+    opacity: 1;
+    border: 1px solid transparent;
+    padding: 0;
+    height: 26px;
+    width: 26px;
+    font-size: 0;
+    background-color: transparent;
+    position: relative;
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $default;
+      position: absolute;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    border-color: $accent;
+    &::before {
+      background-color: $accent;
+    }
+  }
+}
+
