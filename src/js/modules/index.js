@@ -9,6 +9,11 @@ import Swiper, {
   Navigation,
   Pagination
 } from 'swiper'
+import {
+  Fancybox,
+  Carousel,
+  Panzoom
+} from '@fancyapps/ui';
 
 // logger (Full Logging System) =================================================================================================================
 function FLS(message) {
@@ -164,4 +169,15 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
   }
+});
+
+$(function () {
+
+  $(".star").rateYo({
+    starWidth: "17px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
+
 });

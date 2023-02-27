@@ -66,6 +66,7 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "rateyo": "^2.3.2",
     "sass": "^1.45.1",
     "slick-carousel": "^1.8.1",
     "vinyl-ftp": "^0.6.1",
@@ -74,6 +75,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "aos": "^2.3.4",
     "swiper": "^8.4.7"
   }

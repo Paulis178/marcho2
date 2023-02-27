@@ -41,6 +41,7 @@ $hoverBoxShadow:  0 0 5px 0 rgba(#000, 10%),
 $accent: #fe3e57;
 $default: #8d8d8d;
 $title: #29282d;
+$bg: #f6f6f6;
 
 %quicksand-400 {
   font-family: 'Quicksand-Regular', sans-serif;
@@ -69,4 +70,11 @@ $title: #29282d;
   @extend %roboto-400;
   box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
   background-color: $accent;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{a}x(#{$numbers});
 }
